@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".bottomfragments.home.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/extra_extra_light_white"
+        android:layout_height="wrap_content"
+        tools:context=".college.CollegeHome">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:fontFamily="@font/mulibold"
+            android:text="&quot; Dreams Don't Work Unless You Do&quot; "
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/mulibold"
+            android:gravity="end"
+            android:text=" - John C Maxwell "
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dark_grey"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@id/textView19" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

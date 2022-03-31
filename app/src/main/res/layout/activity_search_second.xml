@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search.SearchProfessorActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        user:elevation="0dp"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/button_background"
+                android:fitsSystemWindows="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:theme="@style/Toolbar"
+                user:layout_collapseMode="pin"
+                user:title="Search"
+                user:titleTextColor="@color/pure_white" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_param"
+                style="@style/SearchViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/white_background"
+                android:elevation="4dp"
+                android:fitsSystemWindows="true"
+                android:foregroundTint="@color/black"
+                android:theme="@style/SearchViewTheme"
+                user:closeIcon="@drawable/ic_white_close"
+                user:iconifiedByDefault="false"
+                user:layout_collapseMode="parallax"
+                user:queryHint="Search here"
+                user:searchIcon="@drawable/ic_search" />
+
+            <Button
+                android:id="@+id/hide_filters"
+
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:padding="0dp"
+                android:text="Filters"
+                android:textColor="@color/button2"
+                user:layout_collapseMode="parallax"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@+id/search_param" />
+
+            <LinearLayout
+                android:id="@+id/filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                user:layout_collapseMode="parallax"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@+id/hide_filters">
+
+                <!--    <TextView-->
+                <!--        android:layout_width="match_parent"-->
+                <!--        android:layout_height="wrap_content"-->
+                <!--        android:layout_marginBottom="10dp"-->
+                <!--        android:visibility="gone"-->
+                <!--        android:fontFamily="@font/mulibold"-->
+                <!--        android:text="Select a Filter method to search"-->
+                <!--        android:textColor="@color/black"-->
+                <!--        android:textSize="20sp" />-->
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_grp"
+                    style="@style/ChipsStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    user:singleLine="false"
+
+                    user:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/professor_id"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Professor ID" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/name"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Name" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/department_id"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Department ID" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/class_id"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Class ID" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/hod_id"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HOD ID"
+
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/handling_id"
+                        style="@style/ChipsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Handling Class ID"
+
+                        android:visibility="gone" />
+                </com.google.android.material.chip.ChipGroup>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        user:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toBottomOf="@+id/add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

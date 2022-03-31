@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottomfragments.profile.tabfragments.SemesterDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/button_background"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Toolbar"
+            user:layout_scrollFlags="scroll|enterAlways"
+            user:title="College"
+            user:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/light_white"
+        user:defaultNavHost="true"
+        user:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toBottomOf="@+id/home_app_bar_layout"
+        user:navGraph="@navigation/edit_academic_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@color/extra_light_white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".unfinished.UnfinishedActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/home_app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/button_background"
+                android:fitsSystemWindows="true"
+                android:theme="@style/Toolbar"
+                user:layout_scrollFlags="scroll|enterAlways"
+                user:title="Unfinished Works"
+                user:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/hide">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No unfinished Works Found!"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/personal_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@id/home_app_bar_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/light_white">
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    user:barrierDirection="bottom"
+                    user:constraint_referenced_ids="professor_card" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/professor_card"
+                    style="@style/CardViewStyle.Cut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/extra_light_white"
+                    android:minHeight="80dp"
+                    android:visibility="visible"
+                    user:cardElevation="5dp"
+                    user:layout_constraintBottom_toTopOf="@id/barrier7"
+
+                    user:layout_constraintEnd_toEndOf="parent"
+                    user:layout_constraintStart_toStartOf="parent"
+                    user:layout_constraintTop_toTopOf="parent"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="80dp"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/prof_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:fontFamily="@font/mulibold"
+                                android:text="3"
+                                android:textColor="@color/light_red"
+                                android:textSize="@dimen/_22sdp"
+                                android:textStyle="bold"
+                                user:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+                                user:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/mulibold"
+                                android:text="Professors"
+                                android:textColor="@color/button1"
+                                android:textSize="@dimen/_20sdp"
+                                android:textStyle="bold"
+                                user:layout_constraintBottom_toBottomOf="parent"
+                                user:layout_constraintStart_toEndOf="@+id/prof_num"
+                                user:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/prof_show"
+                                style="@style/ViewAllButttonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_down"
+
+                                user:layout_constraintBottom_toBottomOf="parent"
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintTop_toTopOf="parent"
+                                user:tint="@color/button1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/professor_lay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="0dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            user:layout_constraintEnd_toEndOf="parent"
+
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                            user:layout_constraintVertical_chainStyle="spread">
+
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/divider_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_margin="10dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview_prof"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+
+                                user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/item_unfinished" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/student_card"
+                    style="@style/CardViewStyle.Cut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:minHeight="80dp"
+                    android:visibility="visible"
+
+                    user:cardElevation="5dp"
+                    user:layout_constraintBottom_toBottomOf="parent"
+                    user:layout_constraintEnd_toEndOf="parent"
+                    user:layout_constraintStart_toStartOf="parent"
+
+                    user:layout_constraintTop_toBottomOf="@id/barrier7"
+                    user:layout_constraintVertical_chainStyle="spread"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="80dp"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/stud_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:fontFamily="@font/mulibold"
+                                android:text="3"
+                                android:textColor="@color/light_red"
+                                android:textSize="@dimen/_22sdp"
+                                android:textStyle="bold"
+                                user:layout_constraintBaseline_toBaselineOf="@+id/text"
+                                user:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/mulibold"
+                                android:text="Students"
+                                android:textColor="@color/button1"
+                                android:textSize="@dimen/_20sdp"
+
+                                android:textStyle="bold"
+                                user:layout_constraintBottom_toBottomOf="parent"
+                                user:layout_constraintStart_toEndOf="@+id/stud_num"
+                                user:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/stud_show"
+                                style="@style/ViewAllButttonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_down"
+                                user:layout_constraintBottom_toBottomOf="parent"
+
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintTop_toTopOf="parent"
+                                user:tint="@color/button1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/student_lay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/divider_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_margin="10dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview_stud"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/item_unfinished" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

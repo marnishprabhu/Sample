@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/home_app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/button_background"
+                android:fitsSystemWindows="true"
+                android:theme="@style/Toolbar"
+                user:layout_scrollFlags="scroll|enterAlways"
+                user:title="Search"
+                user:titleTextColor="@color/pure_white"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <Button
+            android:id="@+id/hide_filters"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="0dp"
+            android:textColor="@color/profile_button"
+
+            android:text="Filters"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/search_param" />
+
+<!--        <Button-->
+<!--            android:id="@id/add"-->
+<!--            style="@style/TextButtonStyle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:background="@drawable/button_corner_background"-->
+<!--            android:text="add another filter"-->
+<!--            user:layout_constraintStart_toStartOf="parent"-->
+<!--            user:layout_constraintTop_toBottomOf="@id/filter" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/clear"-->
+<!--            style="@style/TextButtonStyle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:background="@drawable/button_corner_background"-->
+<!--            android:text="clear"-->
+<!--            android:visibility="gone"-->
+<!--            user:layout_constraintBottom_toBottomOf="@+id/add"-->
+<!--            user:layout_constraintEnd_toEndOf="parent"-->
+<!--            user:layout_constraintStart_toEndOf="@+id/add"-->
+<!--            user:layout_constraintTop_toTopOf="@+id/add" />-->
+        <LinearLayout
+            android:id="@+id/filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/hide_filters"
+            android:orientation="vertical">
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:fontFamily="@font/mulibold"-->
+<!--                android:visibility="gone"-->
+
+<!--                android:text="Select a Filter method to search"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20sp" />-->
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_grp"
+                style="@style/ChipsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                user:singleLine="false"
+
+                user:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/roll_num"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roll Number" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/name"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Name" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/department_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Department ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/class_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Class ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/professor_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Professor ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/hod_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="HOD ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/arrears"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrears"
+
+                    android:visibility="gone" />
+            </com.google.android.material.chip.ChipGroup>
+
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:elevation="4dp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/home_app_bar_layout"
+            user:queryHint="Search here"
+            android:theme="@style/SearchViewTheme"
+            style="@style/SearchViewTheme"
+            android:background="@drawable/white_background"
+            user:iconifiedByDefault="false"
+            user:closeIcon="@drawable/ic_white_close"
+            user:layout_scrollFlags="scroll|enterAlways"
+            android:foregroundTint="@color/black"
+            user:searchIcon="@drawable/ic_search"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            user:layout_constraintBottom_toBottomOf="parent"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/filter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

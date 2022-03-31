@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addstudent.FirstFragment">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Photo"
+        android:fontFamily="@font/mulibold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        user:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toEndOf="@+id/profile_image"
+        user:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/add_image_96"
+        user:layout_constraintBottom_toTopOf="@+id/roll_num"
+        user:layout_constraintEnd_toStartOf="@+id/text1"
+        user:layout_constraintHorizontal_chainStyle="packed"
+        user:layout_constraintStart_toStartOf="parent" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/roll_num"-->
+<!--        style="@style/myStyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        user:layout_constraintBottom_toTopOf="@+id/univ_reg_number"-->
+<!--        user:layout_constraintEnd_toEndOf="parent"-->
+<!--        user:layout_constraintHorizontal_bias="0.5"-->
+<!--        user:layout_constraintStart_toStartOf="parent"-->
+<!--        user:layout_constraintTop_toTopOf="parent"-->
+<!--        user:layout_constraintVertical_chainStyle="packed">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="College Roll Number"-->
+<!--            android:inputType="number" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/univ_reg_number"
+        style="@style/myStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintHorizontal_bias="0.5"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="University Number"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_corner_background"
+        android:text="next"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintHorizontal_bias="0.5"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toBottomOf="@+id/univ_reg_number" />
+</androidx.constraintlayout.widget.ConstraintLayout>

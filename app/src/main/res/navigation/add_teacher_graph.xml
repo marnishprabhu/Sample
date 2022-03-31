@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_teacher_graph.xml"
+    user:startDestination="@id/professorFirst">
+
+    <fragment
+        android:id="@+id/professorFirst"
+        android:name="com.example.sample.addprofessor.AddProfessorPersonalFragment"
+        android:label="Personal"
+        tools:layout="@layout/fragment_first_prof" >
+        <action
+            android:id="@+id/action_professorFirst_to_professorSecond"
+            user:destination="@id/professorSecond" />
+        <action
+            android:id="@+id/action_professorFirst_to_professorThird"
+            user:destination="@id/professorThird" />
+        <action
+            android:id="@+id/action_professorFirst_to_professorFourth"
+            user:destination="@id/professorFourth" />
+        <action
+            android:id="@+id/action_professorFirst_to_professorFifth"
+            user:destination="@id/professorFifth" />
+        <action
+            android:id="@+id/action_professorFirst_to_professorSixth"
+            user:destination="@id/professorSixth" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/professorSecond"
+        android:name="com.example.sample.addprofessor.AddProfessorAddressFragment"
+        android:label="Address"
+        tools:layout="@layout/fragment_second_prof" >
+        <action
+            android:id="@+id/action_professorSecond_to_professorThird"
+            user:destination="@id/professorThird" />
+    </fragment>
+    <fragment
+        android:id="@+id/professorThird"
+        android:name="com.example.sample.addprofessor.AddProfessorFamilyFragment"
+        android:label="Family"
+        tools:layout="@layout/fragment_third_prof" >
+        <action
+            android:id="@+id/action_professorThird_to_professorFourth"
+            user:destination="@id/professorFourth" />
+    </fragment>
+    <fragment
+        android:id="@+id/professorFourth"
+        android:name="com.example.sample.addprofessor.AddProfessorQualificationFragment"
+        android:label="Qualification"
+        tools:layout="@layout/fragment_fourth_prof" >
+        <action
+            android:id="@+id/action_professorFourth_to_professorFifth"
+            user:destination="@id/professorFifth" />
+    </fragment>
+    <fragment
+        android:id="@+id/professorFifth"
+        android:name="com.example.sample.addprofessor.AddProfessorHandlingClassFragment"
+        android:label="Handling classes"
+        tools:layout="@layout/fragment_fifth_prof" >
+        <action
+            android:id="@+id/action_professorFifth_to_professorSixth"
+            user:destination="@id/professorSixth" />
+        <action
+            android:id="@+id/action_professorFifth_to_selectDataFragment2"
+            user:destination="@id/selectDataFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/professorSixth"
+        android:name="com.example.sample.addprofessor.AddProfessorOtherDetailsFragment"
+        android:label="Finish"
+        tools:layout="@layout/fragment_sixth_prof" >
+        <action
+            android:id="@+id/action_professorSixth_to_selectDataFragment2"
+            user:destination="@id/selectDataFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectDataFragment2"
+        android:name="com.example.sample.addprofessor.detailview.SelectDataFragment"
+        android:label="Select Class Id"
+        tools:layout="@layout/fragment_select_data" />
+</navigation>

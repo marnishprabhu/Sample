@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    user:cardElevation="0dp"
+    user:strokeWidth="1dp"
+    user:strokeColor="@color/light_black"
+    user:cardCornerRadius="20dp"
+    user:cardPreventCornerOverlap="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/mulibold"
+            android:layout_marginTop="10dp"
+            android:text="Roll Number :"
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_20sdp"
+            android:visibility="visible"
+            user:layout_constraintBaseline_toBaselineOf="@+id/clg_num"
+            user:layout_constraintHorizontal_chainStyle="packed"
+            user:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/nametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulibold"
+            android:text="Name : "
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_20sdp"
+            android:visibility="visible"
+            user:layout_constraintBaseline_toBaselineOf="@+id/actual_name"
+            user:layout_constraintStart_toStartOf="@+id/request" />
+
+        <TextView
+            android:id="@+id/actual_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/mulisemibold"
+            android:text="my full  name this may contains many letters :cccccc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginEnd="5dp"
+            android:visibility="visible"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintHorizontal_bias="0.0"
+            user:layout_constraintStart_toEndOf="@+id/nametext"
+            user:layout_constraintTop_toBottomOf="@+id/clg_num" />
+
+        <TextView
+            android:id="@+id/clg_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+
+            android:fontFamily="@font/mulisemibold"
+            android:gravity="start"
+            android:text="232323232323232323232"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:visibility="visible"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toEndOf="@+id/request"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulibold"
+            android:text="Reason :  "
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_20sdp"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@id/barrier8" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulisemibold"
+            android:text="This is an dummy content area"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginEnd="5dp"
+
+            user:layout_constraintBaseline_toBaselineOf="@+id/reason"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toEndOf="@+id/reason" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/mulibold"
+            android:text="Dates : "
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_20sdp"
+            user:layout_constraintHorizontal_chainStyle="packed"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/content" />
+
+
+        <TextView
+            android:id="@+id/dates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="wewewewe"
+            android:textColor="@color/black"
+            android:fontFamily="@font/mulisemibold"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginEnd="5dp"
+            user:layout_constraintBaseline_toBaselineOf="@+id/date_text"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toEndOf="@id/date_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accept"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_corner_background"
+            android:backgroundTint="@color/black"
+            android:text="Accept"
+            android:textSize="@dimen/_14sdp"
+
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            user:layout_constraintBottom_toBottomOf="parent"
+            user:layout_constraintEnd_toStartOf="@+id/decline"
+            user:layout_constraintHorizontal_bias="0.5"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/status" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/decline"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/button_corner_background"
+            android:backgroundTint="@color/black"
+            android:text="Decline"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            user:layout_constraintBottom_toBottomOf="parent"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintHorizontal_bias="0.5"
+            user:layout_constraintStart_toEndOf="@+id/accept"
+            user:layout_constraintTop_toTopOf="@+id/accept" />
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/mulibold"
+            android:text="Status :"
+            android:textColor="@color/button2"
+            android:textSize="@dimen/_20sdp"
+            user:layout_constraintHorizontal_chainStyle="packed"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@id/dates" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/white"
+            android:text="Pending"
+            android:fontFamily="@font/mulibold"
+            android:textColor="@color/button_leave"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintBaseline_toBaselineOf="@+id/status_text"
+            user:layout_constraintStart_toEndOf="@+id/status_text" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            user:barrierDirection="bottom"
+            user:constraint_referenced_ids="nametext,actual_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

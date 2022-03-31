@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/unifinished"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_error"
+        user:tint="@color/home_red"
+        android:visibility="visible"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/mulibold"
+        android:text="number"
+        android:visibility="visible"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        user:layout_constraintBottom_toTopOf="@id/title"
+        user:layout_constraintEnd_toStartOf="@+id/view_all"
+        user:layout_constraintHorizontal_chainStyle="spread_inside"
+        user:layout_constraintStart_toEndOf="@id/image"
+        user:layout_constraintTop_toTopOf="parent"
+        user:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/mulibold"
+        android:text="This is my title "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        user:layout_constraintTop_toBottomOf="@id/number"
+        user:layout_constraintEnd_toStartOf="@+id/view_all"
+        user:layout_constraintHorizontal_chainStyle="spread_inside"
+        user:layout_constraintStart_toEndOf="@id/image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/view_all"
+        style="@style/TextButtonStyle"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/mulibold"
+        android:gravity="end"
+        android:maxHeight="48dp"
+        android:minHeight="48dp"
+        android:text="View All"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.App.Caption"
+        android:textColor="@color/button2"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:theme="@style/ViewAllButttonStyle"
+        android:visibility="visible"
+        user:layout_constraintBottom_toBottomOf="@+id/title"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toEndOf="@id/title"
+        user:layout_constraintTop_toTopOf="@+id/title" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintBottom_toTopOf="@id/barrier6"
+        user:layout_constraintEnd_toEndOf="@id/title"
+        user:layout_constraintStart_toStartOf="@id/title"
+        user:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        user:barrierDirection="bottom"
+        user:constraint_referenced_ids="view_all,title,divider"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

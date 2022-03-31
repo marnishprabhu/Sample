@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+
+    >
+    <item
+        android:id="@+id/message"
+        user:actionLayout="@layout/item_menu_message"
+        android:icon="@drawable/ic_message_white"
+        android:title="Message"
+        user:showAsAction="always" />
+
+    <item
+        android:id="@+id/leave"
+        user:actionLayout="@layout/item_menu_leave"
+        android:icon="@drawable/icons_white_leave"
+        android:title="Leave Requests"
+        user:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:iconTint="@color/pure_white"
+        android:title="Setting"
+        user:showAsAction="ifRoom" />
+
+
+</menu>

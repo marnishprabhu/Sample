@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".unfinished.EditUnfinishedActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/button_background"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Toolbar"
+            user:layout_scrollFlags="scroll|enterAlways"
+            user:title="Unfinished - Complete"
+            user:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_edit_student"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white"
+            android:visibility="gone"
+            user:defaultNavHost="true"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/home_app_bar_layout"
+            user:navGraph="@navigation/add_student_graph" />
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/add_professor_nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white"
+            user:defaultNavHost="true"
+            android:visibility="gone"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/home_app_bar_layout"
+            user:navGraph="@navigation/add_teacher_graph" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

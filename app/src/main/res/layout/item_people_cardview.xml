@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/people_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        user:cardElevation="3dp"
+        style="@style/CardViewStyle"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent"
+        user:strokeColor="@color/dim"
+        user:strokeWidth="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/mulibold"
+            android:text="Nothing To Show"
+            android:textSize="@dimen/_22sdp"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontal_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+
+        android:orientation="horizontal"
+        android:padding="5dp"
+        user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toBottomOf="@id/horizontal_rec_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

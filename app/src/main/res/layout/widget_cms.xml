@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pure_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/no_of_professors_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/all_black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulibold"
+            android:text="No Of Professors :"/>
+
+        <TextView
+            android:id="@+id/text_no_of_prof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/all_black"
+            android:fontFamily="@font/mulisemibold"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_of_student_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/all_black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/mulibold"
+            android:text="No Of Students :"/>
+
+        <TextView
+            android:id="@+id/text_no_of_students"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/all_black"
+            android:fontFamily="@font/mulisemibold"
+            android:text=""/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_profile"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/button_corner_background"
+            android:textColor="@color/pure_white"
+            android:layout_margin="6dp"
+            android:text="View Profile"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_layout"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/admin_add_student"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/students_new"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:text="Add Student"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/admin_add_professor"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:layout_marginBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/teachings"
+            android:text="Add Professor"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/admin_add_announcement"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/announcement"
+            android:text="Add Announcement"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/professor_layout">
+        <ImageView
+            android:id="@+id/professor_add_student"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/students_new"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:text="Add Student"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+
+
+
+        <ImageView
+            android:id="@+id/prof_add_announcement"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/announcement"
+            android:text="Add Announcement"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/prof_show_leaves"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/icon_leave_new"
+            android:text="Show Leaves"
+            android:textColor="@color/pure_white"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/pure_white"
+            android:background="@drawable/button_corner_background"
+            android:id="@+id/admin_add_student12"
+            android:text="Add Student"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/pure_white"
+            android:background="@drawable/button_corner_background"
+            android:id="@+id/add_professor"
+            android:text="Add Professor"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/pure_white"
+            android:background="@drawable/button_corner_background"
+            android:id="@+id/add_announcement"
+            android:text="Add Announcement"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/student_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:src="@drawable/icon_leave_new"
+            android:textColor="@color/pure_white"
+            android:id="@+id/student_show_leave"
+            android:text="Show Leave"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="12sp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/all_black"
+            android:id="@+id/student_apply_leave"
+            android:text="Apply Leave"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_button"
+            android:layout_gravity="center"
+            android:text="login"
+            android:textColor="@color/pure_white"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/button_corner_background"/>
+
+    </LinearLayout>
+
+</LinearLayout>

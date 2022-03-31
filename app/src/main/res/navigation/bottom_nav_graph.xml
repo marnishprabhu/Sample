@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    user:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/announcementFragment"
+        android:name="com.example.sample.bottomfragments.announcement.AnnouncementFragment"
+        android:label="Announcement"
+        tools:layout="@layout/fragment_announcment">
+        <action
+            android:id="@+id/action_announcementFragment_to_addAnnouncement"
+            user:destination="@id/addAnnouncement" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sample.bottomfragments.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sample.bottomfragments.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.example.sample.bottomfragments.search.SearchOptionsFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+
+    </fragment>
+
+    <activity
+        android:id="@+id/addAnnouncement"
+        android:name="com.example.sample.addannouncement.AddAnnouncement"
+        android:label="activity_add_announcement"
+        tools:layout="@layout/activity_add_announcement">
+        <argument
+            android:name="primaryId"
+            user:argType="integer" />
+
+    </activity>
+
+
+
+</navigation>

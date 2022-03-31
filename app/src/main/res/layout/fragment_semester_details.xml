@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    tools:context=".bottomfragments.profile.tabfragments.SemesterDetailsFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/show"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_corner_background"
+        android:text="Click to see Semester Records"
+        android:textColor="@color/pure_white"
+        user:icon="@drawable/ic_next"
+        user:iconTint="@color/pure_white"
+        user:iconGravity="end"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent" />
+<!--    <androidx.fragment.user.FragmentContainerView-->
+<!--        android:id="@+id/nav_host_fragment"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/light_white"-->
+<!--        user:defaultNavHost="true"-->
+<!--        user:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+<!--        user:layout_constraintBottom_toBottomOf="parent"-->
+<!--        user:layout_constraintEnd_toEndOf="parent"-->
+<!--        user:layout_constraintStart_toStartOf="parent"-->
+<!--        user:layout_constraintTop_toTopOf="parent"-->
+<!--        user:navGraph="@navigation/edit_academic_graph" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

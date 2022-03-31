@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".home.detail.student.SemesterDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/extra_extra_light_white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 1"
+                        android:fontFamily="@font/mulisemibold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView21"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+
+                        user:layout_constraintBottom_toBottomOf="@+id/textView17"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView17"
+                        user:layout_constraintTop_toTopOf="@+id/textView17"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView1s7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 2"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView22"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+
+                        user:layout_constraintBottom_toBottomOf="@+id/textView1s7"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView1s7"
+                        user:layout_constraintTop_toTopOf="@+id/textView1s7"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView1sa7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 3"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView23"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textView1sa7"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView1sa7"
+                        user:layout_constraintTop_toTopOf="@+id/textView1sa7"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewea7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 4"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView24"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textViewea7"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewea7"
+                        user:layout_constraintTop_toTopOf="@+id/textViewea7"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewqwe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 5"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView25"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textViewqwe"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewqwe"
+                        user:layout_constraintTop_toTopOf="@+id/textViewqwe"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViesdwsdse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 6"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView26"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView26"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+
+
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textViesdwsdse"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViesdwsdse"
+                        user:layout_constraintTop_toTopOf="@+id/textViesdwsdse"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViasdse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 7"
+                        android:fontFamily="@font/mulisemibold"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView27"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView27"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textViasdse"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViasdse"
+                        user:layout_constraintTop_toTopOf="@+id/textViasdse"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sem_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewsdse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Semester 8"
+                        android:fontFamily="@font/mulisemibold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView28"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView28"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="@+id/textViewsdse"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewsdse"
+                        user:layout_constraintTop_toTopOf="@+id/textViewsdse"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

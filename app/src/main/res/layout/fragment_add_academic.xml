@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    user:background="@color/profile_back"
+    tools:context=".addacademicdata.add.fragments.AddAcademicFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/profile_back"
+        android:backgroundTint="@color/profile_back"
+        android:backgroundTintMode="screen"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/_60sdp"
+            android:src="@drawable/students_new"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="20dp"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/mulibold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toEndOf="@+id/profile_pic"
+            user:layout_constraintTop_toTopOf="@+id/profile_pic" />
+
+        <TextView
+            android:id="@+id/clg_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muliregular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="@+id/name"
+            user:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/profile_card_view_back_2"
+            user:cardElevation="10dp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/profile_pic"
+            user:shapeAppearance="@style/ProfessorViewAllShapeAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_1_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:fontFamily="@font/mulibold"
+                            android:padding="20dp"
+                            android:text="Semester 1"
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintEnd_toStartOf="@+id/sem_1"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem_1"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+                            user:layout_constraintBottom_toBottomOf="@+id/textView5"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textView5"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_2_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 2"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintEnd_toStartOf="@+id/sem2"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem2"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="@+id/textView6"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textView6"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/addr_hide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintStart_toStartOf="parent"
+                                user:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/house_num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="House Number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintStart_toStartOf="parent"
+                                user:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/street"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="Street name" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintStart_toStartOf="parent"
+                                user:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="City" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                user:layout_constraintEnd_toEndOf="parent"
+                                user:layout_constraintStart_toStartOf="parent"
+                                user:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pin_code"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Pin code"
+
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/address_update"
+                                style="@style/buttonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/button_corner_background"
+                                android:text="Update"
+                                android:theme="@style/buttonStyle" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_3_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 3"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintEnd_toStartOf="@+id/sem3"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem3"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="@+id/textView7"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textView7"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/fam_hide"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/father_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="Father's Name (Optional)" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/father_occupation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="Father's Occupation (Optional)" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/father_phone_num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Phone Number"
+
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/mother_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="Mother's Name (Optional)" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/mother_occupation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:hint="Mother's Occupation (Optional)" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/mother_phone_num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Phone Number"
+
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/myStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/no_sibling"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="No of sibling (Optional)"
+
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/family_update"
+                                style="@style/buttonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/button_corner_background"
+                                android:text="Update"
+                                android:theme="@style/buttonStyle" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_4_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 4"
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            android:fontFamily="@font/mulibold"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toStartOf="@+id/sem4"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem4"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textView8"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_5_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textview10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 5"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toStartOf="@+id/sem5"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem5"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textview10"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_6_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView9s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 6"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toStartOf="@+id/sem6"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem6"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textView9s"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_7_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:layout_constraintEnd_toEndOf="parent"
+
+                    user:layout_constraintStart_toStartOf="parent"
+                    user:layout_constraintTop_toBottomOf="@+id/sem_6_card_view"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textViesw9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 7"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toStartOf="@+id/sem7"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem7"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textViesw9"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sem_8_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    user:cardElevation="3dp"
+                    user:shapeAppearance="@style/ProfessorViewAllShapeAppearance2"
+                    user:strokeColor="@color/profile_card_view_back"
+                    user:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textViewew9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:padding="20dp"
+                            android:text="Semester 8"
+                            android:fontFamily="@font/mulibold"
+
+                            android:textColor="@color/text_edit"
+                            android:textSize="@dimen/_18sdp"
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toStartOf="@+id/sem8"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintHorizontal_chainStyle="spread_inside"
+                            user:layout_constraintStart_toStartOf="parent"
+                            user:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/sem8"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_next"
+
+                            user:layout_constraintBottom_toBottomOf="parent"
+                            user:layout_constraintEnd_toEndOf="parent"
+                            user:layout_constraintHorizontal_bias="0.5"
+                            user:layout_constraintStart_toEndOf="@+id/textViewew9"
+                            user:layout_constraintTop_toTopOf="parent"
+                            user:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

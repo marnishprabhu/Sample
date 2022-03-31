@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="3dp"
+    android:background="@color/extra_light_white"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:longClickable="true"
+        android:background="@color/extra_light_white"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        user:cardElevation="2dp"
+        user:strokeColor="@color/profile_card_view_back"
+        user:strokeWidth="1dp"
+        style="@style/CardViewStyle"
+        user:cardPreventCornerOverlap="false"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/options"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_item"
+                android:visibility="gone"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@id/name"
+                user:layout_constraintTop_toTopOf="parent"
+                user:tint="@color/black" />
+
+            <Button
+                android:id="@+id/message"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Message"
+                android:textColor="@color/button2"
+                android:visibility="gone"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintTop_toBottomOf="@+id/department_id" />
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="40dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:src="@drawable/add_image_96"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintEnd_toStartOf="@id/name"
+                user:layout_constraintHorizontal_chainStyle="spread"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/mulibold"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="A sasa"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                user:layout_constraintEnd_toStartOf="@id/options"
+                user:layout_constraintStart_toEndOf="@id/profile_pic"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/department_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/muliregular"
+                android:text="23232SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                user:layout_constraintEnd_toStartOf="@id/options"
+                user:layout_constraintStart_toStartOf="@+id/name"
+                user:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/clg_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/muliregular"
+                android:text="44tererefe"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintEnd_toStartOf="@+id/message"
+                user:layout_constraintHorizontal_bias="0.5"
+                user:layout_constraintStart_toEndOf="@+id/profile_pic"
+                user:layout_constraintStart_toStartOf="@+id/department_id"
+                user:layout_constraintTop_toBottomOf="@+id/department_id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

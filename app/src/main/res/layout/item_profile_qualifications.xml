@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:user="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/dark_grey"
+        user:cardElevation="5dp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent"
+        user:shapeAppearance="@style/CardView.ShapeAppearance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mulisemibold"
+                android:text="Course Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                user:layout_constraintBottom_toTopOf="@id/barrier3"
+                user:layout_constraintEnd_toStartOf="@id/course_name"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sdp"
+                android:text="Name of "
+                android:fontFamily="@font/muliregular"
+                android:textColor="@color/black"
+                user:layout_constraintBottom_toTopOf="@id/barrier3"
+                user:layout_constraintEnd_toEndOf="parent"
+
+                user:layout_constraintStart_toEndOf="@+id/textView3"
+                user:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                user:barrierDirection="bottom"
+                user:constraint_referenced_ids="textView3,course_name" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"                android:fontFamily="@font/mulisemibold"
+                android:text="Course Percentage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                user:layout_constraintBottom_toTopOf="@id/barrier4"
+                user:layout_constraintEnd_toStartOf="@id/course_percentage"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider" />
+
+            <TextView
+                android:id="@+id/course_percentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/muliregular"
+                android:textColor="@color/black"
+                android:text="Name of the"
+                user:layout_constraintBottom_toTopOf="@id/barrier4"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@+id/textView3"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider" />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider2"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/barrier4" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                user:barrierDirection="bottom"
+                user:constraint_referenced_ids="course_percentage,textView13" />
+
+            <TextView
+                android:id="@+id/textView132"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"                android:fontFamily="@font/mulisemibold"
+                android:text="Course Passing Year"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                user:layout_constraintBottom_toTopOf="@id/barrier5"
+
+                user:layout_constraintEnd_toStartOf="@id/course_pass_year"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider2" />
+
+            <TextView
+                android:id="@+id/course_pass_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/muliregular"
+                android:textColor="@color/black"
+                android:text="Name of the "
+                user:layout_constraintBottom_toTopOf="@id/barrier5"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@+id/textView3"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider2" />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider12"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:visibility="invisible"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/barrier5" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                user:barrierDirection="bottom"
+                user:constraint_referenced_ids="textView132,course_pass_year" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

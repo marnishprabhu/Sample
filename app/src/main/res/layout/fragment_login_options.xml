@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    tools:context=".entry.login.LoginOptionsFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/admin"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+
+        android:background="@drawable/button_corner_background"
+        android:text="Admin"
+        android:textColor="@color/pure_white"
+        android:textSize="@dimen/_11sdp"
+        user:layout_constraintBottom_toTopOf="@+id/professor"
+        user:layout_constraintEnd_toEndOf="@+id/professor"
+        user:layout_constraintStart_toStartOf="@+id/professor"
+        user:layout_constraintTop_toTopOf="parent"
+        user:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/professor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Professor"
+        android:textColor="@color/pure_white"
+
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/_11sdp"
+
+        style="@style/buttonStyle"
+        android:background="@drawable/button_corner_background"
+        android:layout_marginTop="20dp"
+        user:layout_constraintBottom_toTopOf="@+id/student"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintHorizontal_bias="0.5"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toBottomOf="@+id/admin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/student"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_corner_background"
+        android:text="Student"
+
+        android:textColor="@color/pure_white"
+        android:textSize="@dimen/_11sdp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="@+id/professor"
+        user:layout_constraintStart_toStartOf="@+id/professor"
+        user:layout_constraintTop_toBottomOf="@+id/professor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

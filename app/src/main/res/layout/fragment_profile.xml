@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        tools:context=".bottomfragments.profile.ProfileFragment">
+
+        <!--        <com.google.android.material.progressindicator.CircularProgressIndicator-->
+        <!--            android:id="@+id/progress"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            user:indicatorColor="@color/red"-->
+        <!--            user:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            user:layout_constraintEnd_toEndOf="parent"-->
+        <!--            user:layout_constraintStart_toStartOf="parent"-->
+        <!--            user:layout_constraintTop_toTopOf="parent" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/password_change"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:textColor="@color/profile_button"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            user:layout_constraintStart_toEndOf="@+id/profile_pic"
+            user:layout_constraintTop_toBottomOf="@+id/clg_id" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Edit Profile"
+            android:textColor="@color/profile_button"
+            android:visibility="gone"
+            user:layout_constraintBottom_toTopOf="@+id/guideline9"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/clg_id" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment_edit_my_profile"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_white"
+            android:visibility="gone"
+            user:layout_constraintBottom_toBottomOf="parent"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="20dp"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/mulibold"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toEndOf="@+id/profile_pic"
+            user:layout_constraintTop_toTopOf="@+id/profile_pic" />
+
+        <TextView
+            android:id="@+id/clg_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muliregular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="@+id/name"
+            user:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/admin_text"
+            style="@style/CardViewStyle.Cut"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            user:cardElevation="2dp"
+            user:layout_constraintBottom_toBottomOf="@+id/viewpager"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="@+id/guideline9">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/mulibold"
+                android:gravity="center"
+                android:text="No Details Available"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/guideline9"
+            user:layout_scrollFlags="scroll|enterAlways"
+            user:tabBackground="@drawable/tab_color_selector"
+            user:tabIndicator="@color/home_button_view_all"
+            user:tabMode="scrollable"
+            user:tabSelectedTextColor="@color/tab_profile_text_color"
+
+            user:tabTextAppearance="@style/MyTabStyle"
+            user:tabTextColor="@color/pure_white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            user:layout_constraintBottom_toBottomOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            user:layout_constraintGuide_percent="0.20"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

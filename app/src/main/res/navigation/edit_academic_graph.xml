@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_academic_graph.xml"
+    user:startDestination="@id/addAcademicFragment">
+
+    <fragment
+        android:id="@+id/addAcademicFragment"
+        android:name="com.example.sample.addacademicdata.add.fragments.AddAcademicFragment"
+        android:label="fragment_add_academic"
+        tools:layout="@layout/fragment_add_academic" >
+        <action
+            android:id="@+id/action_addAcademicFragment_to_addSemesterFragment"
+            user:destination="@id/addSemesterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSemesterFragment"
+        android:name="com.example.sample.addacademicdata.add.fragments.AddSemesterFragment"
+        android:label="fragment_add_semester"
+        tools:layout="@layout/fragment_add_semester" >
+        <argument
+            android:name="sem"
+            user:argType="integer"
+            android:defaultValue="0" />
+
+    </fragment>
+</navigation>

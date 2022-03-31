@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addstudent.AddStudent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        user:layout_constraintStart_toStartOf="parent"
+        android:fillViewport="true"
+        user:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/button_background"
+                    android:theme="@style/Toolbar"
+                    user:layout_scrollFlags="scroll|enterAlways"
+                    user:title="College"
+                    user:titleTextColor="@color/pure_white" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/add_nav_host"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                user:defaultNavHost="true"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintLeft_toLeftOf="parent"
+                user:layout_constraintRight_toRightOf="parent"
+                user:layout_constraintTop_toBottomOf="@+id/guideline4"
+                user:navGraph="@navigation/add_student_graph" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="horizontal"
+                user:layout_constraintGuide_percent="0.10"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

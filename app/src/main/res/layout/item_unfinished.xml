@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@color/extra_light_white"
+    xmlns:user="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/professor_card"
+        style="@style/CardViewStyle.Cut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        user:cardElevation="2dp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent"
+        user:strokeColor="@color/profile_card_view_back"
+        user:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mulisemibold"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                user:layout_constraintBottom_toTopOf="@id/unique_number"
+                user:layout_constraintEnd_toStartOf="@+id/guideline8"
+                user:layout_constraintHorizontal_chainStyle="spread_inside"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent"
+                user:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <TextView
+                android:id="@+id/unique_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+
+                android:fontFamily="@font/muliregular"
+                android:text="No Value"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                user:layout_constraintEnd_toStartOf="@id/guideline8"
+                user:layout_constraintStart_toStartOf="@id/name"
+                user:layout_constraintTop_toBottomOf="@id/name" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/complete"
+                style="@style/ViewAllButttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:src="@drawable/ic_down"
+                android:text="Complete Now"
+                android:textColor="@color/button1"
+                user:layout_constraintBottom_toBottomOf="@+id/name"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@id/guideline8"
+                user:layout_constraintTop_toTopOf="@+id/name"
+                user:layout_constraintVertical_chainStyle="packed"
+                user:strokeColor="@color/button1"
+                user:tint="@color/button1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/remove"
+                style="@style/ViewAllButttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:src="@drawable/ic_down"
+                android:text="Remove"
+                android:textSize="@dimen/_12sdp"
+
+                android:textColor="@color/button2"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="@+id/guideline8"
+                user:layout_constraintTop_toBottomOf="@id/complete"
+                user:strokeColor="@color/button2"
+                user:tint="@color/button1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+              user:layout_constraintGuide_percent="0.55" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

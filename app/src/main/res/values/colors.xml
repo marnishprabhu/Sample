@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="all_black">#FF000000</color>
+    <color name="send_color">#B247B031</color>
+    <color name="send_color_light">#B275DE5E</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="olive_green">#C6FF00</color>
+    <color name="pure_white">#FFFFFF</color>
+
+    <color name="home_button_view_all">#FF3700B3</color>
+    <color name="profile_button">#FF3700B3</color>
+
+
+    <color name="text_color_1">#041F61</color>
+    <color name="text_color_2">#597FDE</color>
+    <color name="text_color_3">#002A55</color>
+
+    <color name="event_color_1">#597FDE</color>
+    <color name="event_color_2">#002A55</color>
+
+    <color name="button_leave">#1B7DA5</color>
+
+    <color name="button1">#1B7DA5</color>
+    <color name="button2">#0B3DBA</color>
+    <color name="login">#0B3DBA</color>
+
+    <color name="edit_text">#3300C1</color>
+    <color name="light_edit_text1">#BA002ED5</color>
+    <color name="edit_text_1">#3300C1</color>
+
+    <color name="light_edit_text">#7C3300C1</color>
+    <color name="hint_edit_text">#C026DB</color>
+    <color name="dark_grey">#A9A9A9</color>
+    <color name="yellow">#FFEA00</color>
+    <color name="light_yellow">#F5F54A</color>
+    <color name="red">#FF0000</color>
+    <color name="light_red">#A1FF0000</color>
+    <color name="grey">#32A9A9A9</color>
+    <color name="hint_color">#C026DB</color>
+    <color name="home_red">#FF0000</color>
+
+    <color name="light_black">#65252525</color>
+    <color name="low_light_black">#61383737</color>
+    <color name="black_2">#87000000</color>
+    <color name="message_background">#80969696</color>
+
+    <color name="dim">#E6FFFFFF</color>
+    <color name="light_dim">#9B918F8F</color>
+    <color name="light_white">#AAFBF8F8</color>
+    <color name="extra_light_white">#67FBF8F8</color>
+    <color name="extra_extra_light_white">#49E8E7E7</color>
+
+    <color name="text_edit">#D52E2D2D</color>
+    <color name="card_stroke">#FE3300C1</color>
+
+    <color name="profile_back">#CDEDEDED</color>
+    <color name="profile_card_view_back">#D7AEAEAE</color>
+    <color name="profile_card_view_back_2">#C0FFFCFC</color>
+    <color name="blue_text">#0E8EB5</color>
+    <color name="light_green">#96FF0D</color>
+    <color name="title_card">#FFFF4E</color>
+</resources>

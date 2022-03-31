@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/dark_grey"
+        user:cardElevation="5dp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent"
+        user:shapeAppearance="@style/CardView.ShapeAppearance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mulisemibold"
+                android:text="Class ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                user:layout_constraintBottom_toTopOf="@id/barrier3"
+                user:layout_constraintEnd_toStartOf="@id/class_id"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/class_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name of the courddddddddddsedddddddddddddddddddddddddddddddddddddddd"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/muliregular"
+                android:textColor="@color/black"
+
+                user:layout_constraintBottom_toTopOf="@id/barrier3"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@+id/textView3"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                user:barrierDirection="bottom"
+                user:constraint_referenced_ids="textView3,class_id" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mulisemibold"
+                android:text="Subject Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17sdp"
+                user:layout_constraintBottom_toTopOf="@id/barrier4"
+                user:layout_constraintEnd_toStartOf="@id/sub_name"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider" />
+
+            <TextView
+                android:id="@+id/sub_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name of the courddddddddddsedddddddddddddddddddddddddddddddddddddddd"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/muliregular"
+                android:textColor="@color/black"
+                user:layout_constraintBottom_toTopOf="@id/barrier4"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@+id/textView3"
+                user:layout_constraintTop_toBottomOf="@id/materialDivider" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider12"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@id/barrier4" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                user:barrierDirection="bottom"
+                user:constraint_referenced_ids="sub_name,textView13" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

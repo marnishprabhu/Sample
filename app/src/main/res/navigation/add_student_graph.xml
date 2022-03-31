@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_student_graph.xml"
+    user:startDestination="@id/secondFragment">
+
+
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.sample.addstudent.AddStudentPersonalFragment"
+        android:label="Personal Details"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            user:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_fourthFragment2"
+            user:destination="@id/fourthFragment2" />
+        <action
+            android:id="@+id/action_secondFragment_to_fifthFragment"
+            user:destination="@id/fifthFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_sixthFragment"
+            user:destination="@id/sixthFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_fourthFragment22"
+            user:destination="@id/fourthFragment2" />
+        <action
+            android:id="@+id/action_secondFragment_to_fifthFragment2"
+            user:destination="@id/fifthFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_sixthFragment2"
+            user:destination="@id/sixthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.sample.addstudent.AddStudentAddressFragment"
+        android:label="Address Details"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_fourthFragment2"
+            user:destination="@id/fourthFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthFragment2"
+        android:name="com.example.sample.addstudent.AddStudentFamilyFragment"
+        android:label="Family Details"
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/action_fourthFragment2_to_fifthFragment"
+            user:destination="@id/fifthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthFragment"
+        android:name="com.example.sample.addstudent.AddStudentQualficationsFragment"
+        android:label="Qualification"
+        tools:layout="@layout/fragment_fifth" >
+        <action
+            android:id="@+id/action_fifthFragment_to_sixthFragment"
+            user:destination="@id/sixthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sixthFragment"
+        android:name="com.example.sample.addstudent.AddStudentOtherDetailsFragment"
+        android:label="Department"
+        tools:layout="@layout/fragment_sixth" >
+        <action
+            android:id="@+id/action_sixthFragment_to_selectDataFragment"
+            user:destination="@id/selectDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectDataFragment"
+        android:name="com.example.sample.addprofessor.detailview.SelectDataFragment"
+        android:label="fragment_select_data"
+        tools:layout="@layout/fragment_select_data" />
+</navigation>

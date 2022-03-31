@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mulibold"
+
+                android:text="Select a Filter method to search"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_grp"
+                style="@style/ChipsStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                user:singleLine="false"
+
+                user:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/roll_num"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roll Number" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/name"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Name" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/department_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Department ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/class_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Class ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/professor_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Professor ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/hod_id"
+                    style="@style/ChipsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="HOD ID" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/arrears"
+                    style="@style/ChipsStyle"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Arrears" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_param"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/white_background"
+                android:elevation="4dp"
+                android:focusableInTouchMode="true"
+                user:iconifiedByDefault="true"
+                user:queryHint="Enter option" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            user:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

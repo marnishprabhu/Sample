@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="button1">#1B7DA5</color>
+    <color name="profile_button">#EEDE66</color>
+    <color name="text_edit">#FFFFFF</color>
+    <color name="profile_back">#CD2C2C2C</color>
+    <color name="light_black">#CEE7E6E6</color>
+    <color name="button2">#FFFFFF</color>
+    <color name="text_color_1">#C0F8F9FB</color>
+    <color name="text_color_3">#FFD600</color>
+    <color name="button_leave">#EEDE66</color>
+    <color name="send_color">#FFFFFF</color>
+    <color name="home_red">#FFD600</color>
+
+    <color name="black">#FFFFFF</color>
+    <color name="edit_text">#FFFFFF</color>
+    <color name="edit_text_1">#FFFFFF</color>
+    <color name="white">#000000</color>
+    <color name="pure_white">#FFFFFF</color>
+    <color name="light_white">#AA222222</color>
+    <color name="home_button_view_all">#FFFFFF</color>
+    <color name="hint_color">#FFFFFF</color>
+    <color name="all_black">#FF000000</color>
+    <color name="extra_light_white">#39000000</color>
+    <color name="extra_extra_light_white">#000000</color>
+
+</resources>

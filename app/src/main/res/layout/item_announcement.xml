@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/extra_light_white"
+    xmlns:user="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        user:cardPreventCornerOverlap="false"
+        user:cardCornerRadius="20dp"
+        user:strokeColor="@color/light_black"
+        user:strokeWidth="1dp"
+        user:cardElevation="0dp"
+        android:layout_margin="16dp"
+        user:layout_constraintBottom_toBottomOf="parent"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+           >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/mulibold"
+                android:text="This is my titleddddddddddddddddd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                user:layout_constraintEnd_toStartOf="@+id/options"
+                user:layout_constraintHorizontal_chainStyle="packed"
+                user:layout_constraintHorizontal_weight="1"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/mulisemibold"
+                android:paddingBottom="20dp"
+                android:text="This is my deswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwcrissssssssssssssssssssssstion . this can be very more tan you can expect"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                user:layout_constraintEnd_toEndOf="@+id/title"
+                user:layout_constraintStart_toStartOf="@id/title"
+                user:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <ImageView
+                android:id="@+id/options"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_item"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toEndOf="@id/title"
+                user:layout_constraintTop_toTopOf="parent"
+                user:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

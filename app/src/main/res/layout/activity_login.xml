@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".entry.LoginActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mulibold"
+        android:gravity="center"
+        android:text="College Management System"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25sdp"
+        android:visibility="visible"
+        user:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        user:layout_constraintEnd_toEndOf="parent"
+        user:layout_constraintStart_toStartOf="parent"
+        user:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        user:cardCornerRadius="20dp"
+        user:cardElevation="20dp"
+        user:cardPreventCornerOverlap="false"
+        user:layout_constraintBottom_toTopOf="@+id/guideline3"
+        user:layout_constraintEnd_toStartOf="@+id/guideline5"
+        user:layout_constraintStart_toStartOf="@+id/guideline4"
+        user:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@color/login"
+                android:focusable="false"
+                android:text="Login"
+                android:fontFamily="@font/mulibold"
+
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/pure_white"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                user:defaultNavHost="true"
+                android:background="@drawable/login_background"
+                user:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                user:layout_constraintBottom_toBottomOf="parent"
+                user:layout_constraintEnd_toEndOf="parent"
+                user:layout_constraintStart_toStartOf="parent"
+                user:layout_constraintTop_toBottomOf="@+id/materialButton"
+                user:navGraph="@navigation/login_graph" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        user:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        user:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        user:layout_constraintGuide_percent="0.15"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        user:layout_constraintGuide_percent="0.85"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

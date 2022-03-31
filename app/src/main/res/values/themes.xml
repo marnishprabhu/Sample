@@ -1,0 +1,319 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Sample" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_700</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#002171</item>
+        <!--        <item name="android:fontFamily">@font/mulibold</item>-->
+        <!--        <item name="fontFamily">@font/mulibold</item>-->
+        <!-- Customize your theme here. -->
+
+        <item name="android:actionOverflowButtonStyle">@style/searchButtonStyle</item>
+        <item name="actionOverflowButtonStyle">@style/searchButtonStyle</item>
+    </style>
+
+    <style name="DetailTheme" parent="Theme.Sample">
+        <item name="android:textColor">#ff000f</item>
+        <item name="android:textColorPrimary">#ff000f</item>
+        <item name="android:textColorSecondary">#ff000f</item>
+    </style>
+
+    <style name="AlertDialogboxTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+
+    </style>
+
+    <style name="DeleteAlertDialogboxTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="fontFamily">@font/muliregular</item>
+        <item name="android:fontFamily">@font/muliregular</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DeleteNegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DeletePositiveButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/DeletePositiveButtonStyle</item>
+
+    </style>
+
+    <style name="DeletePositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/button2</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/mulibold</item>
+
+    </style>
+
+
+    <style name="DeleteNegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/button2</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/mulibold</item>
+
+
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="searchButtonStyle" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:background">@color/black</item>
+        <item name="background">@color/black</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorControlNormal">@color/pure_white</item>
+        <item name="titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="android:textColor">@color/pure_white</item>
+    </style>
+
+
+    <style name="DetailToolbar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/all_black</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/all_black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorControlNormal">@color/pure_white</item>
+        <item name="titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTextAppearance</item>
+        <item name="android:textColor">@color/all_black</item>
+    </style>
+
+
+
+
+    <style name="buttonStyle" parent="Widget.MaterialComponents.Button">
+
+        <item name="materialThemeOverlay">@style/myCustomButtonOverlay</item>
+        <item name="background">@drawable/button_corner_background</item>
+        <item name="fontFamily">@font/mulisemibold</item>
+        <item name="android:fontFamily">@font/mulisemibold</item>
+        <item name="android:textColor">@color/pure_white</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+
+    </style>
+
+    <style name="TextButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+
+        <item name="materialThemeOverlay">@style/myCustomButtonOverlay</item>
+        <item name="background">@drawable/button_corner_background</item>
+        <item name="fontFamily">@font/mulisemibold</item>
+        <item name="android:fontFamily">@font/mulisemibold</item>
+        <item name="android:textColor">@color/button2</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+
+    </style>
+
+    <style name="myCustomButtonOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">@color/login</item>
+        <item name="colorSecondaryVariant">@color/yellow</item>
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+
+
+    </style>
+
+    <style name="TextAppearance.App.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/mulisemibold</item>
+        <item name="android:fontFamily">@font/mulisemibold</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+
+
+    </style>
+
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/mulibold</item>
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="ToolbarTextAppearance" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/mulibold</item>
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="android:textSize">@dimen/_17sdp</item>
+
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="myStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="hintTextColor">@color/hint_color</item>
+        <item name="errorTextColor">@color/red</item>
+        <!--        <item name="hintTextAppearance">@style/TextAppearance.App.Caption</item>-->
+    </style>
+
+    <style name="MyTabStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+
+    </style>
+
+    <style name="CustomPickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorSecondary">@color/pure_white</item>
+        <item name="android:textColorPrimary">@color/all_black</item>
+        <item name="colorAccent">@color/button1</item>
+        <item name="colorPrimary">@color/button1</item>
+        <item name="colorOnPrimary">@color/button1</item>
+        <item name="colorSecondary">@color/button1</item>
+
+    </style>
+
+    <style name="MyTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="colorOnSurface">#C026DB</item>
+        <item name="hintTextColor">#C026DB</item>
+    </style>
+
+    <style name="myDopdownStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="hintTextColor">@color/hint_edit_text</item>
+        <item name="colorOnSurface">@color/edit_text</item>
+
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/edit_text</item>
+        <item name="colorOnSurface">@color/edit_text_1</item>
+        <item name="colorError">@color/red</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+    </style>
+
+    <style name="ChipsStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <!--        <item name="materialThemeOverlay">@style/ChipOverlay</item>-->
+        <item name="chipBackgroundColor">@color/chip_background_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="fontFamily">@font/mulibold</item>
+
+    </style>
+
+    <style name="ChipOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="elevationOverlayColor">@color/button1</item>
+        <item name="elevationOverlayEnabled">false</item>
+
+    </style>
+
+
+    <style name="CardView.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+        <item name="android:background">@color/hint_edit_text</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="EntryCenterStyle" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
+
+    <style name="ProfessorViewAllShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">60dp</item>
+        <item name="cornerSizeTopRight">60dp</item>
+
+    </style>
+
+    <style name="ProfessorViewAllShapeAppearance2" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">10dp</item>
+
+    </style>
+
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearance">@style/CardView.ShapeAppearance.own</item>
+
+    </style>
+
+    <style name="ViewAllButttonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="colorPrimary">@color/button2</item>
+        <item name="colorOnPrimary">@color/button1</item>
+        <item name="textAppearanceButton">@style/TextAppearanceButton</item>
+        <item name="android:drawable">@drawable/button_corner_background</item>
+
+    </style>
+
+    <style name="TextAppearanceButton" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/actor</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+
+    </style>
+
+    <style name="CardViewStyle.Cut" parent="Widget.MaterialComponents.CardView">
+        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="fontFamily">@font/mulibold</item>
+        <item name="shapeAppearance">@style/CardView.ShapeAppearance.cut</item>
+
+    </style>
+
+    <style name="CardView.ShapeAppearance.own" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="CardView.ShapeAppearance.cut" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="SearchviewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="colorPrimaryVariant">@color/light_white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.SearchView</item>
+
+
+    </style>
+
+    <style name="ThemeOverlay.App.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="colorPrimary">#B11212</item>
+        <item name="colorOnSurface">@color/dim</item>
+        <item name="colorError">@color/dim</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+    </style>
+
+    <style name="SearchViewTheme">
+        <item name="android:editTextColor">@color/all_black</item>
+        <item name="android:textColorHint">@color/all_black</item>
+        <item name="closeIconTint">@color/all_black</item>
+        <item name="background">@drawable/white_background</item>
+
+    </style>
+</resources>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.detail.professor.MainProfessorDetailFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/teachings"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/mulibold"
+            android:text="Name of the person"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.App.Caption"
+
+            android:textSize="@dimen/_19sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintHorizontal_bias="0.5"
+            user:layout_constraintStart_toEndOf="@+id/imageView3"
+            user:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/college_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/muliregular"
+            android:text="College Id"
+            style="@style/TextAppearance.App.Subtitle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintHorizontal_bias="0.5"
+            user:layout_constraintStart_toEndOf="@+id/imageView3"
+            user:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <Button
+            android:id="@+id/send_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            style="@style/buttonStyle"
+            android:textSize="@dimen/_14sdp"
+            android:textAppearance="@style/TextAppearance.App.Caption"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_corner_background"
+            android:text="Send Message"
+            android:visibility="visible"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/college_id" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/extra_extra_light_white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            user:layout_constraintEnd_toEndOf="parent"
+            user:layout_constraintStart_toStartOf="parent"
+            user:layout_constraintTop_toBottomOf="@+id/send_msg">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/personal_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Personal Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView15"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView17"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/address_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView1s7"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Address Details"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView16"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView1s7"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/family_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView1sa7"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Family Details"
+                        android:textColor="@color/black"
+
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView17"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textView1sa7"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/qualifications_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewea7"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Educational Details"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView18"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewea7"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/handling_class_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewqwe"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Handling Classes"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView19"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewqwe"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/other_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_margin="10dp"
+                user:cardCornerRadius="10dp"
+                user:cardElevation="10dp"
+                user:strokeColor="@color/profile_card_view_back"
+                user:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewsdse"
+                        style="@style/TextAppearance.App.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/mulibold"
+                        android:text="Other Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toStartOf="@+id/imageView20"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintHorizontal_chainStyle="spread_inside"
+                        user:layout_constraintStart_toStartOf="parent"
+                        user:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_next"
+                        user:layout_constraintBottom_toBottomOf="parent"
+                        user:layout_constraintEnd_toEndOf="parent"
+                        user:layout_constraintHorizontal_bias="0.5"
+                        user:layout_constraintStart_toEndOf="@+id/textViewsdse"
+                        user:layout_constraintTop_toTopOf="parent"
+                        user:tint="@color/black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

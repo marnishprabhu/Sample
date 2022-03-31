@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sample">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CMS"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sample">
+        <activity
+            android:name=".message.ui.ShowMessageActivity"
+            android:exported="false"
+            android:parentActivityName=".message.ui.MessageActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".message.ui.MessageActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".setting.ChangeThemeActivity"
+            android:exported="false"
+            android:parentActivityName=".setting.SettingActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".bottomfragments.search.student.SearchStudentActivity"
+            android:exported="false"
+            android:parentActivityName=".search.SearchActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".leave.ShowLeaveActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".leave.ApplyLeaveActivity"
+            android:exported="false"
+            android:parentActivityName=".leave.ApplyLeaveActivity"
+            android:screenOrientation="portrait"
+          />
+        <activity
+            android:name=".home.detail.ProfessorDetailActivity"
+            android:exported="false"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.detail.StudentDetailActivity"
+            android:exported="false"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.DetailActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottomfragments.profile.tabfragments.SemesterDetailsActivity"
+            android:exported="false"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addacademicdata.add.AcademicEditActivity"
+            android:exported="false"
+
+            android:parentActivityName=".addacademicdata.AddAcademicActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".addacademicdata.AddAcademicActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unfinished.EditUnfinishedActivity"
+            android:exported="false"
+            android:parentActivityName=".unfinished.UnfinishedActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unfinished.UnfinishedActivity"
+            android:exported="false"
+            android:parentActivityName=".unfinished.EditUnfinishedActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".entry.LoginActivity"
+            android:exported="false"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchProfessorActivity"
+            android:exported="false"
+            android:parentActivityName=".search.SearchActivity"
+
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.edit.EditViewAllActivity"
+            android:exported="false"
+            android:parentActivityName=".home.MainActivity"
+
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.ViewAllActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            android:parentActivityName=".home.MainActivity" />
+        <activity
+            android:name=".addevent.AddEventActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".home.MainActivity"
+
+            android:exported="false" />
+        <activity
+            android:name=".addannouncement.AddAnnouncement"
+            android:exported="false"
+            android:screenOrientation="portrait"
+
+            android:parentActivityName=".home.MainActivity" />
+        <activity
+            android:name=".addprofessor.AddProfessor"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".addstudent.AddStudent"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
+            android:name=".home.MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".entry.SplashScreenAppActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".widget.CMSWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cms_appwidget_info" />
+        </receiver>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
