@@ -60,7 +60,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        Log.d(TAG, "onSupportNavigateUp: 123")
+        Log.d(TAG, "onSupportNavigateUp: 123 55555555555555")
         return super.onSupportNavigateUp()
     }
 
